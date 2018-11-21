@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Inteligencia artificial </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo-canvas.css">
+</head>
+
+<body>
+    <!--<body onload="crearLienzo()";>-->
+
+    <div class="container">
+        <div class="row">
+            <form class="form-group" name="procesar" action="#">
+                <label class="control-label">Número de nodos </label>
+                <input type="number" class="form-control" id="num_nodos" value="0" name="numNodos" placeholder='Número de Nodos'>
+                <button class="btn btn-primary btn" id="crear" type="button">Dibujar grafo</button>
+                <!--<input type="submit"  id="boton" name="ver" value="Aceptar" /> -->
+                <button class="btn btn-primary btn" id="reset" type="button" onclick="resetear()">Limpiar Lienzo</button>
+                <br>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6" id="divCont">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3" id="divDatos">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3" id="divResultado">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dinamicos.js"></script>
+    <script src="js/lienzo-grafo.js"></script>
+</body>
+
+</html>
