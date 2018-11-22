@@ -15,16 +15,22 @@
     <div class="container">
         <div class="row">
             <form class="form-group" name="procesar" action="#">
-                <label class="control-label">Número de nodos </label>
-                <input type="number" class="form-control" id="num_nodos" value="0" name="numNodos" placeholder='Número de Nodos'>
-                <button class="btn btn-primary btn" id="crear" type="button">Dibujar grafo</button>
-                <!--<input type="submit"  id="boton" name="ver" value="Aceptar" /> -->
-                <button class="btn btn-primary btn" id="reset" type="button" onclick="resetear()">Limpiar Lienzo</button>
+                <button class="btn btn-primary" id="crearNodos" type="button">Dibujar nodos</button>
+                <button class="btn btn-primary" id="crearVerti" type="button">Dibujar vertices</button>
+                <button class="btn btn-primary" id="reset" type="button" onclick="resetear()">Limpiar Lienzo</button>
                 <br>
             </form>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6" id="divCont">
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                        lienzo para dibujar grafo
+                    </div>
+                    <div class="panel panel-body">
+                        <canvas id="myCanvas" width="500" height="400"></canvas>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3" id="divDatos">
             </div>

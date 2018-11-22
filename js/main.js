@@ -1,15 +1,20 @@
 $(function() {
 
-    $('#crear').on('click', function() {
-        var n = $('input#num_nodos').val();
-        if (n == 0) alert('NO hay suficientes nodos');
-        else {
-            document.getElementById('crear').disabled = true;
-            inactivo = true;
-            crearPanel("Lienzo para dibujar grafo", "divCont", "divPanel"); //Esta funcion esta en dinamicos.js
-            crearCanvas(); //Esta función esta en Grafo.js
+    $('#myCanvas').on('click', function(event) {
+        var x = document.getElementById("crearNodos").disabled;
+        console.log(x);
+        if (x == false) {
+            alert('Necesitas precionar el boton dibujar nodos');
+        } else {
+            var x1 = event.offsetX;
+            var y1 = event.offsetY;
+            console.log(x1 + " " + y1)
+            crearNodos(x1, y1);
         }
     });
 
+    $('#crearNodos').on('click', function() {
+        document.getElementById("crearNodos").disabled = true;
+    });
 
 });
